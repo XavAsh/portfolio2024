@@ -1,0 +1,613 @@
+/* ==============================General Styles============================== */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+body {
+    font-family: 'PT Serif', serif;
+
+}
+
+
+  html {
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      overflow-x: hidden;
+    }
+
+  /*Marges remisent à 0*/
+  * {
+    margin: 0px;
+    margin-left: 0px  ;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+  }
+
+    #separator-bar {
+        height: 5px;
+        background-color: var(--main-color); 
+        position: absolute;
+        left: 0;
+        width: 100%;
+    }
+
+    :root {
+        --main-color: #2E86AB; /* Used */
+        --secondary-color: #E8872E; /* Used */
+        --text-color: #333333; /* Used */
+        --background-color: #F4EEED; /* Used */
+        --section-color: #6D6875; /* Used */
+    }
+    
+    
+
+/* ==============================Header Styles============================== */
+/* Header styles */
+header {
+    background-color: var(--main-color);
+    width: 100%;
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    transition: top 0.3s; /* Add smooth transition for header */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+    border-radius: 15px;
+}
+
+nav ul li a:hover {
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+}
+
+#scrollIndicator {
+    position: fixed;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 8px;
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#scrollIndicator.visible {
+    opacity: 1; 
+}
+
+#scrollIndicator.hidden {
+    display: none;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    margin: 5px 0; /* reduce the spacing between dots */
+    display: block; 
+    text-decoration: none; 
+}
+
+
+
+.dot:hover {
+    background-color:var(--main-color); 
+}
+.dot.active {
+    width: 20px;
+    height: 20px;
+    background-color:var(--main-color); 
+}
+
+.switch {
+    position: fixed;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    z-index: 1000;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color:var(--main-color);
+}
+
+input:focus + .slider {
+    box-shadow:var(--main-color);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+/* ==============================Presentation============================== */
+#Presentation {
+    padding: 20px;
+    min-height: 100vh;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--background-color);
+}
+
+#Presentation .wrapper {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+}
+
+#Presentation .box-grid {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3em; /* Adjusted gap */
+}
+
+#Presentation .box-grid .container-picture img {
+    display: block; 
+    max-width: 100%; 
+    max-height: 500px; 
+    width: auto; 
+    height: auto; 
+    border-radius: 50%; 
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#Presentation .box-grid .border {
+    height: 400px;
+    width: 400px;
+    border: solid 4px var(--secondary-color);
+    margin-left: -40px;
+    margin-top: 40px;
+    border-radius: 9999px;
+    position: absolute;
+}
+
+#Presentation .box-grid .border:nth-child(1) {
+    margin-right: -100px;
+    margin-bottom: 50px;
+    border: solid 4px var(--main-color);
+}
+
+#Presentation .box-grid .container-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    gap: 0em;
+}
+
+#Presentation .box-grid .container-content .content-title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px 30px;
+}
+
+#Presentation .box-grid .container-content .content-title h2 {
+    color: var(--text-color);
+    font-size: clamp(2em, 4vw, 3.8em);
+    line-height: 1.3;
+}
+
+#Presentation .box-grid .container-content .content-title h1 {
+    color: var(--text-color);
+    font-size: clamp(2.5em, 5vw, 4em);
+    line-height: 1.3;
+}
+
+#Presentation .box-grid .container-content .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 500px;
+}
+
+#Presentation .box-grid .container-content .content p {
+    text-align: center;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+#Presentation .box-grid .container-content .content p span {
+    color: var(--background-color);
+    font-weight: 600;
+}
+
+#Presentation .box-grid .container-content .content .info {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 30px;
+}
+
+
+/* Media query for smaller screens */
+@media (max-width: 900px) {
+    #Presentation .box-grid {
+        gap: 3em;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 5px;
+    }
+
+    #Presentation .container-arrow {
+        display: none;
+    }
+
+    #Presentation .container-picture img {
+        margin-top: 60px !important;
+        width: auto !important;
+        height: 250px !important;
+        background-size: cover !important;
+        background-position: center  !important;
+        background-repeat: no-repeat !important;
+    }
+
+    #Presentation .border {
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    #Presentation .info {
+        flex-direction: column;
+    }
+
+    #Presentation .box-grid .container-content .content .info {
+        gap: 2em;
+        align-items: center;
+        justify-content: center;
+        padding: 0 30px;
+    }
+
+    #Presentation .box-grid .container-content {
+        gap: 2em;
+    }
+}
+
+
+/* ==============================Portfolio============================== */
+
+
+#Portfolio {
+    background-color: var(--background-color);
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    color: var(--text-color);
+
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.column {
+    flex: 0 0 calc(50% - 20px); 
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.column img {
+    max-height: 400px; 
+    width: auto; 
+    max-width: 100%; 
+    border-radius: 5px;
+}
+
+.column p {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+@media screen and (max-width: 768px) {
+    .column {
+        flex: 0 0 calc(100% - 20px); 
+    }
+}
+
+
+/* ==============================Tech============================== */
+
+#Tech-Monitoring {
+    background-color: var(--background-color);
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    color: var(--text-color);
+}
+
+#Tech-Monitoring .box-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#Tech-Monitoring .container-content {
+    flex: 0 0 calc(50% - 20px);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#Tech-Monitoring .container-picture img {
+    max-height: 400px;
+    width: auto;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+#Tech-Monitoring .container-content p {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+@media screen and (max-width: 768px) {
+    #Tech-Monitoring .container-content {
+        flex: 0 0 calc(100% - 20px);
+    }
+}
+
+/* ==============================About-me============================== */
+
+#About-me {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--background-color);
+    font-size: 30px;
+    color: var(--text-color);
+}
+#About-me h1 {
+    color: var(--text-color);
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#About-me .box-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#About-me .container-picture {
+    margin: auto; 
+}
+
+#About-me .container-picture img {
+    display: block;
+    max-width: 100%;
+    max-height: 500px; 
+    height: auto;
+    border-radius: 50%;
+}
+
+#About-me .container-content {
+    max-width: 600px; 
+    margin: auto; 
+}
+
+
+
+#About-me .content p {
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left; /* Align the text to the left */
+    margin: 0; /* Remove default margin */
+}
+
+@media (max-width: 900px) {
+    #About-me .box-grid {
+        gap: 3em;
+        flex-direction: column; /* Change flex direction to column */
+        align-items: center; /* Center align items */
+    }
+
+    #About-me .container-picture {
+        order: -1; /* Move the picture to the top */
+    }
+
+    #About-me .container-picture img {
+        width: 200px !important;
+        height: 200px !important;
+        max-height: 200px !important; /* Adjusted max height */
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
+
+    #About-me .container-content {
+        max-width: 80%; /* Adjusted maximum width */
+    }
+}
+
+
+
+
+
+/* ==============================Contact============================== */
+
+#Contact {
+    background-color: var(--background-color);
+    text-align: center;
+    padding: 20px;
+    
+}
+#Contact h2 {
+    font-size: 50px;
+    color: var(--text-color);
+}
+
+#Contact .wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#Contact .container-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+}
+
+
+
+#Contact .title {
+    color: var(--text-color);
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#Contact .content {
+    color: var(--text-color);
+}
+
+
+
+#Contact .material-symbols-outlined {
+    margin-right: 10px;
+}
+
+#Contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#Contact form .info-contact {
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+/* ==============================Footer============================== */
+footer {
+    background-color: var(--main-color);
+    padding: 20px;
+    text-align: center;
+    color: #ffffff; 
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+footer li {
+    display: inline-block;
+    margin: 0 10px; 
+}
+
+footer a {
+    color: #ffffff; 
+    text-decoration: none;
+    font-size: 20px; 
+    width: auto; 
+    height: auto;
+    border: 2px solid #ffffff; 
+    border-radius: 50%; 
+    padding: 5px; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    justify-content: center;
+    align-items: center; 
+}
+
+footer a:hover {
+    background-color: var(--secondary-color); 
+    color: var(--main-color); 
+}
+
