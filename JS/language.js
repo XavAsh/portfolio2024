@@ -92,4 +92,3 @@ function switchLanguage() {
         document.querySelector('footer p').textContent = '© 2024 - Portfolio by Xavier ASHTON';
     }
 }
-
