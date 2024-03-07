@@ -21,8 +21,8 @@ function switchLanguage() {
         document.querySelector('#Portfolio .column:nth-child(1) p').textContent = '2024: Projet de stage de deuxième année utilisant PHP procédural, HTML, CSS, JS, SQL. Actuellement hébergé et utilisable';
         document.querySelector('#Portfolio .column:nth-child(2) p').textContent = '2023: Petit site web pour un salon de coiffure local utilisant HTML et CSS. Actuellement hébergé et utilisable';
         document.querySelector('#Portfolio .column:nth-child(3) p').textContent = '2023: Projet de stage de première année, utilisant HTML, CSS. Sera bientôt hébergé et utilisable';
-        document.querySelector('#Portfolio .row .column:nth-child(1) p').textContent = '2023: Projet scolaire de deuxième année pour un site web de location de véhicules utilisant PHP procédural MVC, bases de données MySQL, HTML, CSS, JS. Développé pour un usage local uniquement';
-        document.querySelector('#Portfolio .column:nth-child(2) p').textContent = '2023: Projet scolaire de première année pour un site web de musée utilisant HTML, CSS, JS. Développé pour un usage local uniquement';
+        document.getElementById('t1').textContent = '2023: Projet scolaire de deuxième année pour un site web de location de véhicules utilisant PHP procédural MVC, bases de données MySQL, HTML, CSS, JS. Développé pour un usage local uniquement';
+        document.getElementById('t2').textContent = '2023: Projet scolaire de première année pour un site web de musée utilisant HTML, CSS, JS. Développé pour un usage local uniquement';
         
         document.querySelector('#About-me h2').textContent = 'À propos de moi';
         document.querySelector('#About-me .content p').textContent = "Je suis étudiant en développement web, actuellement en deuxième année d'un programme de diplôme de deux ans. Je suis activement à la recherche d'un stage pour la fin de l'année et je suis également disponible pour des opportunités en freelance. Ma passion se situe dans le développement web, et je m'efforce constamment d'améliorer mes compétences. J'ai de l'expérience dans le travail avec HTML, CSS, JavaScript, PHP et SQL, et j'élargis actuellement mes connaissances en C# et C++. En plus du développement web, je m'intéresse vivement à la cybersécurité, que j'étudie activement pendant mon temps libre. Quand je ne code pas, vous pouvez me trouver plongé dans les jeux vidéo ou en train d'écouter de la musique. Je suis également un passionné de cinéma et j'adore regarder des films pendant mon temps libre. Voyager est une autre de mes passions, et je suis toujours impatient d'explorer de nouvelles destinations et cultures.";
@@ -39,7 +39,7 @@ function switchLanguage() {
         `;
     
         document.querySelector('#Tech-Monitoring .content h4').textContent = "Article vedette";
-        document.getElementById('test').textContent = 'Un des articles remarquables que j\'ai récemment découvert s\'intitule "L\'avenir du travail : Adopter les technologies de collaboration à distance." Il explore comment le travail à distance a remodelé notre façon de collaborer et discute du rôle de technologies innovantes telles que la réalité virtuelle et la réalité augmentée dans la facilitation de la collaboration à distance sans faille.';
+        document.getElementById('techy').textContent = 'Un des articles remarquables que j\'ai récemment découvert s\'intitule "L\'avenir du travail : Adopter les technologies de collaboration à distance." Il explore comment le travail à distance a remodelé notre façon de collaborer et discute du rôle de technologies innovantes telles que la réalité virtuelle et la réalité augmentée dans la facilitation de la collaboration à distance sans faille.';
         document.querySelector('#Tech-Monitoring .content a').textContent = 'Lire la suite';
         document.querySelector('#Tech-Monitoring .content a').href = 'https://www.techradar.com/news/computing-components/graphics-cards/amd-vs-nvidia-who-makes-the-best-graphics-cards-699480';
         document.querySelector('#Tech-Monitoring .content a').target = '_blank';
@@ -89,7 +89,7 @@ function switchLanguage() {
         `;
 
         document.querySelector('#Tech-Monitoring .content h4').textContent = "Featured Article";
-        document.getElementById('test').textContent = 'One of the notable articles I recently came across is titled "The Future of Work: Embracing Remote Collaboration Technologies." It explores how remote work has reshaped our approach to collaboration and discusses the role of innovative technologies such as virtual reality and augmented reality in facilitating seamless remote collaboration.';
+        document.getElementById('techy').textContent = 'One of the notable articles I recently came across is titled "The Future of Work: Embracing Remote Collaboration Technologies." It explores how remote work has reshaped our approach to collaboration and discusses the role of innovative technologies such as virtual reality and augmented reality in facilitating seamless remote collaboration.';
         document.querySelector('#Tech-Monitoring .content a').textContent = 'Read more';
         document.querySelector('#Tech-Monitoring .content a').href = 'https://www.techradar.com/news/computing-components/graphics-cards/amd-vs-nvidia-who-makes-the-best-graphics-cards-699480';
         document.querySelector('#Tech-Monitoring .content a').target = '_blank';
