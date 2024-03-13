@@ -37,6 +37,7 @@ body {
         position: absolute;
         left: 0;
         width: 100%;
+        z-index: 1;
     }
 
     :root {
@@ -166,70 +167,112 @@ nav ul li a:hover {
     background-color:var(--main-color); 
 }
 
-.switch {
-    position: fixed;
-    margin-top: 45px;
-    margin-left: 10px;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    z-index: 1000;
-}
+/* ==============================Language Switch============================== */
 
-.switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
+.toggle-button-cover {
+    display: table-cell;
     position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
+    width: 200px;
+    height: 140px;
+    box-sizing: border-box;
+  }
+  
+  .button-cover {
+    height: 100px;
+    margin: 20px;
+    background-color: var(--background-color);
+    border-radius: 4px;
+    position: absolute;
+  }
+  
+  .button-cover:before {
+    counter-increment: button-counter;
+    content: counter(button-counter);
+    position: absolute;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-radius: 34px;
+    font-size: 12px;
+    line-height: 1;
+    padding: 5px;
+  }
+  
+  .button {
+    position: fixed;
+    background-color: white ;
+    bottom: 25px; 
+    left: 5px;
+    width: 58px;
+    height: 36px;
+    margin: -20px auto 0 auto;
+    overflow: hidden;
+    border: 2px solid var(--section-color); 
+    border-radius: 50px; 
+    box-sizing: border-box; 
+    z-index: 2;
 }
-
-.slider:before {
+  
+  .checkbox {
     position: absolute;
-    content: "";
-    height: 26px;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  #button-3 .knobs:before {
+    content: "ENG";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 10px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 3px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+  }
+  
+  #button-3 .checkbox:active + .knobs:before {
     width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-radius: 50%;
-}
+    border-radius: 100px;
+  }
+  
+  #button-3 .checkbox:checked:active + .knobs:before {
+    margin-left: -6px;
+  }
+  
+  #button-3 .checkbox:checked + .knobs:before {
+    content: "FR";
+    left: 26px;
+    background-color: var(--secondary-color);
+  }
+  
+  @media screen and (max-width: 900px) {
+    .button {
+        transform: rotate(90deg);
+        bottom: 25px; 
+        left: -10px;
+        height: 32px;
+        z-index: 1000;
+    }
+    #button-3 .knobs:before {
+        transform: rotate(270deg); 
+        top : 0px;
+      }
 
-input:checked + .slider {
-    background-color:var(--main-color);
+    #button-3 .checkbox:checked + .knobs:before {
+        transform: rotate(270deg);
+      }
 }
-
-input:focus + .slider {
-    box-shadow:var(--main-color);
-}
-
-input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-}
-
-.slider.round {
-    border-radius: 34px;
-}
-
-.slider.round:before {
-    border-radius: 50%;
-}
-
+  
 
 /* ==============================Presentation============================== */
 #Presentation {
@@ -453,8 +496,8 @@ input:checked + .slider:before {
 
 #Tech-Monitoring .container-picture img {
     max-height: 400px;
+    max-width: 400px;
     width: auto;
-    max-width: 100%;
     border-radius: 5px;
 }
 
