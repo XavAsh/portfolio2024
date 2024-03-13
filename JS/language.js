@@ -12,7 +12,7 @@ function switchLanguage() {
         
         document.querySelector('#Presentation h1').textContent = 'Xavier ASHTON';
         document.querySelector('#Presentation h2').textContent = 'Développeur, Étudiant.';
-        document.querySelector('#Presentation p').textContent = 'Je suis étudiant en développement web, actuellement en deuxième année d\'un diplôme de deux ans. Je recherche un stage pour la fin de l\'année.';
+        document.querySelector('#Presentation p').textContent = 'Je suis étudiant en développement web, actuellement en deuxième année d\'un diplôme de deux ans. Je recherche une alternance pour la fin de l\'année.';
         
         document.querySelector('#Portfolio h2').textContent = 'Quelques-uns de mes projets';
         document.querySelector('#Portfolio h3:nth-child(3)').textContent = 'Projets professionnels';
@@ -25,12 +25,12 @@ function switchLanguage() {
         document.getElementById('t2').textContent = '2023: Projet scolaire de première année pour un site web de musée utilisant HTML, CSS, JS.';
         
         document.querySelector('#About-me h2').textContent = 'À propos de moi';
-        document.querySelector('#About-me .content p').textContent = "Je suis étudiant en développement web, actuellement en deuxième année d'un programme de diplôme de deux ans. Je suis activement à la recherche d'un stage pour la fin de l'année et je suis également disponible pour des opportunités en freelance. Ma passion se situe dans le développement web, et je m'efforce constamment d'améliorer mes compétences. J'ai de l'expérience dans le travail avec HTML, CSS, JavaScript, PHP et SQL, et j'élargis actuellement mes connaissances en C# et C++. En plus du développement web, je m'intéresse vivement à la cybersécurité, que j'étudie activement pendant mon temps libre. Quand je ne code pas, vous pouvez me trouver plongé dans les jeux vidéo ou en train d'écouter de la musique. Je suis également un passionné de cinéma et j'adore regarder des films pendant mon temps libre. Voyager est une autre de mes passions, et je suis toujours impatient d'explorer de nouvelles destinations et cultures.";
+        document.querySelector('#About-me .content p').textContent = "Je suis étudiant en développement web, actuellement en deuxième année d'un programme de diplôme de deux ans. Je suis activement à la recherche d'une alternance pour la fin de l'année et je suis également disponible pour des opportunités en freelance. Ma passion se situe dans le développement web, et je m'efforce constamment d'améliorer mes compétences. J'ai de l'expérience dans le travail avec HTML, CSS, JavaScript, PHP et SQL, et j'élargis actuellement mes connaissances en C# et C++. En plus du développement web, je m'intéresse vivement à la cybersécurité, que j'étudie activement pendant mon temps libre. Quand je ne code pas, vous pouvez me trouver plongé dans les jeux vidéo ou en train d'écouter de la musique. Je suis également un passionné de cinéma et j'adore regarder des films pendant mon temps libre. Voyager est une autre de mes passions, et je suis toujours impatient d'explorer de nouvelles destinations et cultures.";
         document.querySelector('#About-me .content-title h4').textContent = 'Téléchargez mon CV';
         
         document.querySelector('#Tech-Monitoring h2').textContent = 'Points saillants de la veille technologique';
         document.querySelector('#Tech-Monitoring .content  h3:nth-child(1)').textContent = 'Dernières tendances technologiques';
-        document.querySelector('#Tech-Monitoring .content p').textContent = "Au cours des derniers mois, j'ai suivi de près le paysage dynamique de la technologie, en restant à jour avec les dernières tendances et innovations. Voici quelques-uns des développements remarquables:";
+        document.querySelector('#Tech-Monitoring .content p').textContent = "Au cours des derniers mois, j'ai suivi de près le paysage dynamique de la technologie, en restant à jour avec les dernières tendances et innovations.";
         document.querySelector('#Tech-Monitoring .content ul').innerHTML = `
         <p>J'ai étudié l'évolution des cartes graphiques, en suivant de près les dernières avancées technologiques. Cela inclut les développements en intelligence artificielle et en apprentissage automatique, ainsi que les améliorations des techniques de rendu et des performances. De plus, j'ai surveillé la sortie de nouveaux modèles de cartes graphiques de fabricants comme NVIDIA et AMD, en analysant leurs spécifications et leurs capacités. Dans l'ensemble, mon objectif a été de comprendre comment les cartes graphiques continuent de repousser les limites de l'informatique visuelle.</p> `;
     
@@ -65,8 +65,8 @@ function switchLanguage() {
         document.querySelector('#Portfolio .column:nth-child(1) p').textContent = '2024: Second year work placement project using procedural PHP, HTML, CSS, JS, SQL. Currently hosted and usable';
         document.querySelector('#Portfolio .column:nth-child(2) p').textContent = '2023: Small website for a local hairdressers using HTML and CSS. Currently hosted and usable';
         document.querySelector('#Portfolio .column:nth-child(3) p').textContent = '2023: First year work placement project, using HTML, CSS. Will soon be hosted and usable';
-        document.getElementById('t1').textContent = '2023: Second year school project for a vehicle rental website dynamically using procedural MVC PHP, MySQL Databases, HTML, CSS, JS. Developed for local use only';
-        document.getElementById('t2').textContent = '2023: First year school project for a museum website using HTML, CSS, JS. Developed for local use only.';
+        document.getElementById('t1').textContent = '2023: Second year school project for a vehicle rental website dynamically using procedural MVC PHP, MySQL Databases, HTML, CSS, JS.';
+        document.getElementById('t2').textContent = '2023: First year school project for a museum website using HTML, CSS, JS.';
         
         document.querySelector('#About-me h2').textContent = 'About me';
         document.querySelector('#About-me .content p').textContent = "I'm a web development student currently in my second year of a two-year diploma program. I'm actively seeking a work placement for the end of the year and I'm also available for freelance opportunities. My passion lies in web development, and I'm constantly striving to enhance my skills. I have experience working with HTML, CSS, JavaScript, PHP, and SQL, and I'm currently expanding my knowledge on C# and C++. In addition to web development, I have a keen interest in cybersecurity, which I'm actively studying in my free time. When I'm not coding, you can find me immersed in video games or enjoying music. I'm also an avid movie enthusiast and love watching films in my spare time. Traveling is another passion of mine, and I'm always eager to explore new destinations and cultures.";
