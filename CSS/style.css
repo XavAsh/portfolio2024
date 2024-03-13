@@ -65,6 +65,7 @@ nav ul {
     padding: 0;
     text-align: center;
     margin: 0;
+
 }
 
 nav ul li {
@@ -88,6 +89,37 @@ nav ul li a:hover {
     background-color: var(--secondary-color);
     border-radius: 15px;
 }
+
+
+
+@media screen and (max-width: 600px) {
+    header {
+        position: static;
+        padding: 0;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none; 
+        padding: 0; 
+        margin: 0; 
+        width: 100%; 
+        text-align: center; 
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        padding: 10px 20px;
+        border-radius: 0;
+    }
+}
+
 
 #scrollIndicator {
     position: fixed;
@@ -499,8 +531,6 @@ input:checked + .slider:before {
     }
 
     #About-me .container-picture img {
-        width: 200px !important;
-        height: 200px !important;
         max-height: 200px !important; /* Adjusted max height */
         background-size: cover !important;
         background-position: center center !important;

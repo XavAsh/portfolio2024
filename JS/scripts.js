@@ -39,4 +39,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Call setActiveDot initially to highlight the correct dot on page load
     setActiveDot();
+
+    
 });
+//Menu hamburger clique
+const menuHamburger = document.querySelector(".menu-hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+menuHamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("mobile-menu");
+});
+
